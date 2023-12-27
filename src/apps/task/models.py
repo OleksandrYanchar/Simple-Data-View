@@ -2,7 +2,6 @@ from django.db import models
 from django.urls import reverse
 
 
-
 class Category(models.Model):
     name = models.CharField(max_length=250, db_index=True)
     slug = models.SlugField(max_length=250, unique=True)
@@ -13,10 +12,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 class Product(models.Model):
-    category = models.ForeignKey(
-        Category, on_delete=models.CASCADE, null=True
-    )
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=250, unique=True)
     brand = models.CharField(max_length=250, default="un-branded")
     description = models.TextField(blank=True)

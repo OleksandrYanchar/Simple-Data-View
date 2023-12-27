@@ -21,8 +21,7 @@ DJANGO_APPS = [
 ]
 
 LOCAL_APPS = [
-    'task',
-
+    "task",
 ]
 
 THIRD_PARTY = []
@@ -75,7 +74,7 @@ AUTH_PASSWORD_VALIDATORS = [
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, 'templates')],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -102,7 +101,6 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "static/media"
 
 
-
 # OTHER
 STATIC_DIR = BASE_DIR.parent
 WSGI_APPLICATION = "config.wsgi.application"
@@ -121,9 +119,9 @@ ROOT_URLCONF = "config.urls"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-#OPTIONAL
+# OPTIONAL
 
-#EMAIL
+# EMAIL
 
 """ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
